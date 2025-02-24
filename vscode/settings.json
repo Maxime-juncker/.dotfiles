@@ -41,7 +41,7 @@
 	"gitlens.advanced.messages": {
 		"suppressLineUncommittedWarning": true
 	},
-	"editor.mouseWheelScrollSensitivity": 5,
+	"editor.mouseWheelScrollSensitivity": 2,
 	"hexeditor.showOpenFileButton": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"git.confirmSync": false,
@@ -55,5 +55,8 @@
 	"terminal.integrated.fontFamily": "monospace",
 	"editor.guides.bracketPairs": true,
 	"C_Cpp.autocompleteAddParentheses": true,
-	"editor.renderWhitespace": "boundary"
+	"editor.renderWhitespace": "boundary",
+	"update.showReleaseNotes": false,
+	"gitlens.hovers.enabled": false,
+	"explorer.autoReveal": false
 }

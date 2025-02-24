@@ -1,19 +1,9 @@
-require("mjuncker")
+require("core.keymaps")
+require("core.plugins")
+require("core.plugin_config")
 
--- Mason setup
-require("mason").setup()
-require("mason-lspconfig").setup {
-  ensure_installed = { "clangd" }, -- Install clangd for C/C++
-}
+vim.opt.expandtab = false  -- Use tabs instead of spaces
+vim.opt.tabstop = 4        -- Number of spaces that a <Tab> counts for
+vim.opt.shiftwidth = 4     -- Number of spaces for each indentation
+vim.opt.softtabstop = 4    -- Number of spaces a <Tab> feels like
 
--- LSP Config
-local lspconfig = require("lspconfig")
-lspconfig.clangd.setup {}
-
-require'lspconfig'.clangd.setup{
-    cmd = {
-        "clangd",
-        "--background-index",
-        "--suggest-missing-includes"
-    }
-}
