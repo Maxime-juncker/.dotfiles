@@ -84,10 +84,25 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -99,15 +114,20 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonLeao/gruvbox.nvim"
   },
-  ["lazygit.nvim"] = {
-    loaded = true,
-    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
-    url = "https://github.com/kdheepak/lazygit.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["makeit.nvim"] = {
+    commands = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vmakeit\frequire\0" },
+    load_after = {},
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/opt/makeit.nvim",
+    url = "https://github.com/Zeioth/makeit.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -144,6 +164,14 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["overseer.nvim"] = {
+    after = { "makeit.nvim" },
+    config = { "\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14task_list\1\0\1\14task_list\0\1\0\4\15min_height\3\25\19default_detail\3\1\14direction\btop\15max_height\3\25\nsetup\roverseer\frequire\0" },
+    loaded = true,
+    only_config = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/overseer.nvim",
+    url = "https://github.com/stevearc/overseer.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -158,10 +186,45 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: overseer.nvim
+time([[Config for overseer.nvim]], true)
+try_loadstring("\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14task_list\1\0\1\14task_list\0\1\0\4\15min_height\3\25\19default_detail\3\1\14direction\btop\15max_height\3\25\nsetup\roverseer\frequire\0", "config", "overseer.nvim")
+time([[Config for overseer.nvim]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'MakeitRedo', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitRedo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('MakeitRedo ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'MakeitOpen', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitOpen', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('MakeitOpen ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'MakeitToggleResults', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitToggleResults', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('MakeitToggleResults ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
