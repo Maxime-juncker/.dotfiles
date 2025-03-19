@@ -51,12 +51,18 @@
 	"editor.cursorBlinking": "smooth",
 	"workbench.colorTheme": "Visual Studio Dark - C++",
 	"window.customTitleBarVisibility": "auto",
-	"editor.fontFamily": "\"Consolas, 'Courier New', monospace\"",
-	"terminal.integrated.fontFamily": "monospace",
+	"editor.fontFamily": "Consolas, ‘Courier New’, monospace",
+	"terminal.integrated.fontFamily": "Consolas, ‘Courier New’, monospace",
 	"editor.guides.bracketPairs": true,
 	"C_Cpp.autocompleteAddParentheses": true,
 	"editor.renderWhitespace": "boundary",
 	"update.showReleaseNotes": false,
 	"gitlens.hovers.enabled": false,
-	"explorer.autoReveal": false
+	"explorer.autoReveal": false,
+	"window.zoomLevel": 1,
+	"gitlens.graph.layout": "editor",
+	"gitlens.graph.minimap.dataType": "lines",
+	"security.allowedUNCHosts": [
+		"wsl.localhost"
+	]
 }

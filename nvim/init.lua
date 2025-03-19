@@ -2,6 +2,7 @@ require("core.keymaps")
 require("core.plugins")
 require("core.plugin_config")
 
+vim.wo.relativenumber = true
 vim.opt.expandtab = false  -- Use tabs instead of spaces
 vim.opt.tabstop = 4        -- Number of spaces that a <Tab> counts for
 vim.opt.shiftwidth = 4     -- Number of spaces for each indentation
