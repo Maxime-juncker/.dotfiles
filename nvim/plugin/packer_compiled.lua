@@ -89,10 +89,20 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonLeao/gruvbox.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
