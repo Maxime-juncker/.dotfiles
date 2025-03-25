@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -98,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["cyberdream.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -113,6 +123,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonLeao/gruvbox.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\15show_start\2\rshow_end\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0" },
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -138,6 +159,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -187,6 +213,16 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/which-key.nvim",
@@ -199,15 +235,19 @@ time([[Defining packer_plugins]], false)
 time([[Config for overseer.nvim]], true)
 try_loadstring("\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\14task_list\1\0\1\14task_list\0\1\0\4\15min_height\3\25\19default_detail\3\1\14direction\btop\15max_height\3\25\nsetup\roverseer\frequire\0", "config", "overseer.nvim")
 time([[Config for overseer.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\15show_start\2\rshow_end\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'MakeitRedo', function(cmdargs)
-          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitRedo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'MakeitToggleResults', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitToggleResults', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('MakeitRedo ', 'cmdline')
+          return vim.fn.getcompletion('MakeitToggleResults ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'MakeitOpen', function(cmdargs)
           require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitOpen', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
@@ -216,12 +256,12 @@ pcall(vim.api.nvim_create_user_command, 'MakeitOpen', function(cmdargs)
           require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('MakeitOpen ', 'cmdline')
       end})
-pcall(vim.api.nvim_create_user_command, 'MakeitToggleResults', function(cmdargs)
-          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitToggleResults', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+pcall(vim.api.nvim_create_user_command, 'MakeitRedo', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitRedo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('MakeitToggleResults ', 'cmdline')
+          return vim.fn.getcompletion('MakeitRedo ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
