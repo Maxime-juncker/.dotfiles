@@ -59,7 +59,8 @@ return require('packer').startup(function(use)
 	})
 	use 'romgrk/barbar.nvim'
 	use 'folke/which-key.nvim'
-
+	use 'andweeb/presence.nvim'
+	use { 'ray-x/lsp_signature.nvim' } -- Shows function signatures inline
 
 	-- themes
 	use "scottmckendry/cyberdream.nvim"
@@ -68,17 +69,17 @@ return require('packer').startup(function(use)
 	use "EdenEast/nightfox.nvim"
 	use "rebelot/kanagawa.nvim"
 	use { "catppuccin/nvim", as = "catppuccin" }
-use 'Mofiqul/vscode.nvim'
+	use 'Mofiqul/vscode.nvim'
 
-use {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-        require("ibl").setup {
-            indent = { char = "│" },
-            scope = { show_start = true, show_end = true }, -- Enable scope highlighting
-        }
-    end
-}
+	use {
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup {
+				indent = { char = "│" },
+				scope = { show_start = true, show_end = true }, -- Enable scope highlighting
+			}
+		end
+	}
 
 
 

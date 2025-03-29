@@ -8,3 +8,5 @@ vim.api.nvim_set_keymap('n', '<leader>mt', "<cmd>MakeitToggleResults<cr>", { nor
 vim.api.nvim_set_keymap('n', '<C-Right>', ':BufferNext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-Left>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<leader>sn', ':noh<CR>', { noremap = true, silent = true, desc="toggle search"})
+

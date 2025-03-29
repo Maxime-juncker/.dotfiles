@@ -125,7 +125,7 @@ _G.packer_plugins = {
     url = "https://github.com/ellisonLeao/gruvbox.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\15show_start\2\rshow_end\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0" },
+    config = { "\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\rshow_end\2\15show_start\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0" },
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -134,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -208,6 +213,11 @@ _G.packer_plugins = {
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/mjuncker/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -237,24 +247,24 @@ try_loadstring("\27LJ\2\n–\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\
 time([[Config for overseer.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\15show_start\2\rshow_end\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+try_loadstring("\27LJ\2\n‰\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\nscope\1\0\2\rshow_end\2\15show_start\2\vindent\1\0\2\vindent\0\nscope\0\1\0\1\tchar\bâ”‚\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'MakeitToggleResults', function(cmdargs)
-          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitToggleResults', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('MakeitToggleResults ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'MakeitOpen', function(cmdargs)
           require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitOpen', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('MakeitOpen ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'MakeitToggleResults', function(cmdargs)
+          require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitToggleResults', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'makeit.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('MakeitToggleResults ', 'cmdline')
       end})
 pcall(vim.api.nvim_create_user_command, 'MakeitRedo', function(cmdargs)
           require('packer.load')({'makeit.nvim'}, { cmd = 'MakeitRedo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
