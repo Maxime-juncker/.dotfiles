@@ -61,6 +61,7 @@ return require('packer').startup(function(use)
 	use 'folke/which-key.nvim'
 	use 'andweeb/presence.nvim'
 	use { 'ray-x/lsp_signature.nvim' } -- Shows function signatures inline
+	use 'eriks47/generate.nvim'
 
 	-- themes
 	use "scottmckendry/cyberdream.nvim"

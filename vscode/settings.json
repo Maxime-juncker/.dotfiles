@@ -64,5 +64,7 @@
 	"gitlens.graph.minimap.dataType": "lines",
 	"security.allowedUNCHosts": [
 		"wsl.localhost"
-	]
+	],
+	"C_Cpp.formatting": "disabled",
+	"editor.formatOnSaveMode": "modifications"
 }
