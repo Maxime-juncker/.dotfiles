@@ -139,5 +139,5 @@ function fman() {
 }
 
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
-
+export PATH=/home/mjuncker/.local/kitty.app/bin:$PATH
 #~/minishell
