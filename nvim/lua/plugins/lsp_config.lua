@@ -34,16 +34,6 @@ return {
 			  map('n', 'K', vim.lsp.buf.hover, opts)
 			  map('n', '<leader>fr', require('telescope.builtin').lsp_references,
 				{ noremap = true, silent = true, buffer = bufnr, desc = "find reference" })
-		  
-			  -- 🪄 Autoformat on save if supported
-			  if client.server_capabilities.documentFormattingProvider then
-				vim.api.nvim_create_autocmd("BufWritePre", {
-				  buffer = bufnr,
-				  callback = function()
-					vim.lsp.buf.format({ async = false })
-				  end,
-				})
-			  end
 			end,
 		  
 			capabilities = capabilities,
@@ -59,7 +49,6 @@ return {
 			},
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		  })
-		  
 	  end,
 	},
 	{
