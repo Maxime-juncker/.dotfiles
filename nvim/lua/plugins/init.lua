@@ -17,24 +17,31 @@ return
 			vim.cmd([[MasonInstall codelldb]]) -- Or you can use cpptools
 		end
 	},
-		"nvim-telescope/telescope-dap.nvim", -- Optional telescope integration
-{
-  "WhoIsSethDaniel/mason-tool-installer.nvim",
-  dependencies = {
-    "williamboman/mason.nvim",
-  },
-  config = function()
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        "codelldb",     -- For debugging with codelldb
-        "cpptools",     -- Microsoft C/C++ tools (for debugging)
-        "clangd",       -- C/C++ language server
-        "clang-format", -- C/C++ formatter
-        -- Add any other tools you need
-      },
-      auto_update = true,
-      run_on_start = true,
-    })
-  end
-}
+	"nvim-telescope/telescope-dap.nvim", -- Optional telescope integration
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"codelldb",     -- For debugging with codelldb
+					"cpptools",     -- Microsoft C/C++ tools (for debugging)
+					"clangd",       -- C/C++ language server
+					"clang-format", -- C/C++ formatter
+					-- Add any other tools you need
+				},
+				auto_update = true,
+				run_on_start = true,
+			})
+		end
+	},
+
+	{
+		"rockyzhang24/arctic.nvim",
+		branch = "v2",
+		dependencies = { "rktjmp/lush.nvim" }
+	},
+	'SuperBo/fugit2.nvim',
 }
