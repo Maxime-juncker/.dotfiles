@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.dap")
 require("config.keymaps")
+require("config.neogit")
 
 vim.api.nvim_set_option("clipboard", "unnamed")
 vim.wo.relativenumber = true
