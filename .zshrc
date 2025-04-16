@@ -103,31 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias make scene="kill -1 -1"
-cat <<'EOF'
-        ____________________________
-       /                            \
-      |  ________________________    |
-      | |                        |   |
-      | |  C:\> mjuncker_        |   |
-      | |                        |   |
-      | |                        |   |
-      | |                        |   |
-      | |                        |   |
-      | |________________________|   |
-      |                              |
-       \____________________________/
-          \______________________/
-        .___________________________.
-        |                           |
-        |___________________________|
-
-
-EOF
-
-
-alias francinette=/home/mjuncker/francinette/tester.sh
-
-alias paco=/home/mjuncker/francinette/tester.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -139,5 +114,7 @@ function fman() {
 }
 
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
-export PATH=/home/mjuncker/.local/kitty.app/bin:$PATH
-#~/minishell
+export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
+
+
+fastfetch
