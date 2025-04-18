@@ -5,6 +5,17 @@ return
 	'rafamadriz/friendly-snippets',
 	'romgrk/barbar.nvim',
 	'eriks47/generate.nvim',
+"rebelot/kanagawa.nvim",
+	"ellisonleao/gruvbox.nvim",
+	{
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end,
+		opts = {
+			-- add any options here
+		}
+	},
 
 	{
 		"williamboman/mason.nvim",
@@ -44,4 +55,5 @@ return
 		dependencies = { "rktjmp/lush.nvim" }
 	},
 	'SuperBo/fugit2.nvim',
+
 }

@@ -1,11 +1,11 @@
 
 
 -- dap ---
-vim.keymap.set('n', '<F5>', function() require('dap').continue() end, { desc = "Debug: Continue" })
+vim.keymap.set('n', '<Leader>dn', function() require('dap').continue() end, { desc = "launch no build" })
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Debug: Step Over" })
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Debug: Step Into" })
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = "Debug: Step Out" })
-vim.keymap.set('n', '<Leader>db', function() require('dap').toggle_breakpoint() end, { desc = "Debug: Toggle Breakpoint" })
+vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Debug: Toggle Breakpoint" })
 vim.keymap.set('n', '<Leader>dB', function() require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, { desc = "Debug: Conditional Breakpoint" })
 vim.keymap.set('n', '<Leader>dl', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end, { desc = "Debug: Logpoint" })
 vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end, { desc = "Debug: Open REPL" })
@@ -23,10 +23,23 @@ end, { desc = "Debug: Add Watch (UI)" })
 
 ------------------
 
+vim.keymap.set('n', '<F5>', function()
+  vim.fn.system("make")
+  if vim.v.shell_error ~= 0 then
+    print("Build failed!")
+    return
+  end
+  require('dap').continue()
+end, { desc = "Debug: Build and Launch" })
+
 
 -- neogit
 vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Neogit" })
 -- diffview
 vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>", { desc = "Open Diffview" })
 vim.keymap.set("n", "<leader>gh", ":DiffviewFileHistory<CR>", { desc = "File History" })
+vim.keymap.set("n", "<leader>gc", ":DiffviewClose<CR>", { desc = "Close Diffview" })
 
+vim.keymap.set("n", "<leader>hs", ":noh<CR>", { desc = "Hide Search" })
+
+vim.keymap.set("n", "<C-/>", function() require('Comment.api').toggle.linewise.current() end, { noremap = true, silent = true })

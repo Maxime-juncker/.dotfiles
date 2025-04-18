@@ -102,16 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias make scene="kill -1 -1"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-alias bat="batcat"
-alias make scene="kill -1 -1"
-# Same as above, but with previews and works correctly with man pages in different sections.
-function fman() {
-    man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
-}
 
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
 export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
