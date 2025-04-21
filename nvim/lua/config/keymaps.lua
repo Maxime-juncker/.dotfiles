@@ -1,4 +1,7 @@
-
+-- Move to previous/next
+vim.api.nvim_set_keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
 
 -- dap ---
 vim.keymap.set('n', '<Leader>dn', function() require('dap').continue() end, { desc = "launch no build" })
