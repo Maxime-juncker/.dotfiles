@@ -106,5 +106,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
 export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
 
-
+alias valgrind="/sgoinfre/dderny/Softwares/valgrind_breaker"
 fastfetch

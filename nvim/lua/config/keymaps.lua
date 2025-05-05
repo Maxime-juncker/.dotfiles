@@ -26,6 +26,8 @@ end, { desc = "Debug: Add Watch (UI)" })
 
 ------------------
 
+vim.keymap.set('n', '<Leader>fr', function() require('telescope.builtin').lsp_references() end, { noremap = true, silent = true })
+
 vim.keymap.set('n', '<F5>', function()
   vim.fn.system("make")
   if vim.v.shell_error ~= 0 then

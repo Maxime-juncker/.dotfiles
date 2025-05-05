@@ -1,5 +1,5 @@
 {
-	"files.autoSave": "afterDelay",
+	"files.autoSave": "onFocusChange",
     "makefile.configureOnOpen": true,
     "42header.username": "mjuncker",
     "workbench.iconTheme": "material-icon-theme",
@@ -49,8 +49,6 @@
 	"workbench.list.smoothScrolling": true,
 	"editor.smoothScrolling": true,
 	"editor.cursorBlinking": "smooth",
-	"workbench.colorTheme": "Visual Studio Dark - C++",
-	"window.customTitleBarVisibility": "auto",
 	"editor.fontFamily": "Consolas, ‘Courier New’, monospace",
 	"terminal.integrated.fontFamily": "Consolas, ‘Courier New’, monospace",
 	"editor.guides.bracketPairs": true,
@@ -59,12 +57,31 @@
 	"update.showReleaseNotes": false,
 	"gitlens.hovers.enabled": false,
 	"explorer.autoReveal": false,
-	"window.zoomLevel": 1,
 	"gitlens.graph.layout": "editor",
 	"gitlens.graph.minimap.dataType": "lines",
 	"security.allowedUNCHosts": [
 		"wsl.localhost"
 	],
 	"C_Cpp.formatting": "disabled",
-	"editor.formatOnSaveMode": "modifications"
+	"editor.formatOnSaveMode": "modifications",
+	"editor.inlineSuggest.suppressSuggestions": true,
+	"C_Cpp.codeAnalysis.clangTidy.args": [
+		"--extra-arg=-Wall",
+		"--extra-arg=-Wextra",
+		"--extra-arg=-Wunused-include-directive"
+	],
+	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
+	"workbench.editor.editorActionsLocation": "titleBar",
+	"glassit.alpha": 220,
+	"vscode-blur-linux.opacity": 10,
+	"animations.Install-Method": "Apc Customize UI++",
+	"workbench.colorTheme": "Visual Studio Dark - C++",
+	"C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+	"C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+	"C_Cpp.default.intelliSenseMode": "gcc-x64",
+	"C_Cpp.inlayHints.parameterNames.enabled": true,
+	"C_Cpp.workspaceSymbols": "All",
+	"C_Cpp.vcFormat.indent.braces": true,
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"C_Cpp.exclusionPolicy": "checkFilesAndFolders"
 }

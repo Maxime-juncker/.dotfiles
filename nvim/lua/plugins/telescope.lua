@@ -8,7 +8,6 @@ return {
 		vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 		vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 		vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-  
 		require('telescope').setup {
 		  defaults = {
 			vimgrep_arguments = {
@@ -23,7 +22,10 @@ return {
 			},
 		  },
 		  pickers = {
-			lsp_references = {
+			  live_grep = {
+				  theme = "dropdown",
+			  },
+			  lsp_references = {
 			  include_declaration = true,
 			  show_line = false,
 			  trim_text = true,
