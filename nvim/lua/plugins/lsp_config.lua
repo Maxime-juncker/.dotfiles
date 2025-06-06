@@ -6,15 +6,6 @@ return {
 		end,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "clangd"},
-			})
-		end,
-	},
-	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp", -- for capabilities
@@ -46,8 +37,23 @@ return {
 					"--index",
 					"--index-file=.clangd-index",
 					"--pch-storage=memory",
+					"--header-insertion=never",
 				},
-				filetypes = { "c", "cpp", "objc", "objcpp" },
+				filetypes = { "c", "cpp", "tpp", "objc", "objcpp" },
+
+				settings = {
+    clangd = {
+      InlayHints = {
+        Designators = true,
+        Enabled = true,
+        ParameterNames = true,
+        DeducedTypes = true,
+      },
+      fallbackFlags = { "-std=c++20" },
+    },
+  }
+
+
 			})
 		end,
 	},

@@ -48,3 +48,9 @@ vim.keymap.set("n", "<leader>gc", ":DiffviewClose<CR>", { desc = "Close Diffview
 vim.keymap.set("n", "<leader>hs", ":noh<CR>", { desc = "Hide Search" })
 
 vim.keymap.set("n", "<C-/>", function() require('Comment.api').toggle.linewise.current() end, { noremap = true, silent = true })
+
+
+--
+-- inline hint
+--
+-- vim.keymap.set("n", "<leader>it", ":InlayHintsToggle<CR>", { desc = "Toggle inline hint" })

@@ -6,15 +6,6 @@ return {
 		"mfussenegger/nvim-dap",
       "williamboman/mason.nvim", -- Optional but recommended for easy adapter installation
     },
-	 config = function()
-      require("mason-nvim-dap").setup({
-        ensure_installed = {
-          "cpptools",
-          "codelldb",
-        },
-        automatic_installation = true,
-      })
-    end,
   },
   
   -- DAP UI setup

@@ -5,7 +5,7 @@ return
 	'rafamadriz/friendly-snippets',
 	'romgrk/barbar.nvim',
 	'eriks47/generate.nvim',
-"rebelot/kanagawa.nvim",
+	"rebelot/kanagawa.nvim",
 	"ellisonleao/gruvbox.nvim",
 	{
 		'numToStr/Comment.nvim',
@@ -17,30 +17,20 @@ return
 		}
 	},
 
-	{
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason").setup()
-			require("mason-lspconfig").setup()
-
-			-- Install the debug adapter
-			vim.cmd([[MasonInstall codelldb]]) -- Or you can use cpptools
-		end
-	},
 	"nvim-telescope/telescope-dap.nvim", -- Optional telescope integration
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		dependencies = {
 			"williamboman/mason.nvim",
 		},
+		event = "BufReadPre", -- or another appropriate event
+		config = true,
 		config = function()
 			require("mason-tool-installer").setup({
 				ensure_installed = {
-					"codelldb",     -- For debugging with codelldb
-					"cpptools",     -- Microsoft C/C++ tools (for debugging)
 					"clangd",       -- C/C++ language server
 					"clang-format", -- C/C++ formatter
+					"codelldb",
 					-- Add any other tools you need
 				},
 				auto_update = true,
@@ -56,4 +46,33 @@ return
 	},
 	'SuperBo/fugit2.nvim',
 
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "InsertEnter",
+		opts = {
+			bind = true,
+			handler_opts = {
+				border = "rounded"
+			}
+		},
+		-- or use config
+		-- config = function(_, opts) require'lsp_signature'.setup({you options}) end
+	},
+	{
+		"Djancyp/better-comments.nvim",
+		config = function()
+			require('better-comment').Setup({
+				tags = {
+					{
+						name = "TODO",
+						fg = "#0a7aca",
+						bg = "",
+						bold = true,
+						virtual_text = "",
+					},
+
+				}
+			})
+		end
+	}
 }
