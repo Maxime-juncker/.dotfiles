@@ -8,6 +8,7 @@ vim.keymap.set('n', '<Leader>dn', function() require('dap').continue() end, { de
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, { desc = "Debug: Step Over" })
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end, { desc = "Debug: Step Into" })
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, { desc = "Debug: Step Out" })
+vim.keymap.set('n', "<F8>", function() require('dap').disconnect({ terminateDebuggee = true }) require'dap'.close() end, {desc = "Stop"})
 vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end, { desc = "Debug: Toggle Breakpoint" })
 vim.keymap.set('n', '<Leader>dB', function() require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, { desc = "Debug: Conditional Breakpoint" })
 vim.keymap.set('n', '<Leader>dl', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end, { desc = "Debug: Logpoint" })

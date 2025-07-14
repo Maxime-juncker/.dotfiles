@@ -17,8 +17,12 @@ dap.adapters.cppdbg = {
 		  program = function()
             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
           end,
-          cwd = '${workspaceFolder}',
-          stopOnEntry = true,
+		  cwd = '${workspaceFolder}',
+		  args = function()
+			  local input = vim.fn.input('Program arguments (space-separated): ')
+			  return vim.fn.split(input, " ", true)
+		  end,
+		  stopOnEntry = true,
           setupCommands = {
             {
               text = '-enable-pretty-printing',

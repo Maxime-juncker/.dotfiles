@@ -70,7 +70,13 @@ return
 						bold = true,
 						virtual_text = "",
 					},
-
+					{
+						name = "TOFIX",
+						fg = "#EE4B2B",
+						bg = "",
+						bold = true,
+						virtual_text = "",
+					},
 				}
 			})
 		end
