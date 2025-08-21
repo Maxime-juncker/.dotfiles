@@ -1,6 +1,9 @@
+
+
 return {
 	{
 		"hrsh7th/nvim-cmp",
+		commit = "97dc716fc914c46577a4f254035ebef1aa72558a",
 		event = "InsertEnter", -- Load on insert mode
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",   -- LSP source for cmp

@@ -7,8 +7,9 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		version = "v0.2.9",
 		dependencies = {
-			"hrsh7th/cmp-nvim-lsp", -- for capabilities
+			-- "hrsh7th/cmp-nvim-lsp", -- for capabilities
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
