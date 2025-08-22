@@ -72,6 +72,7 @@ return {
 		end,
 	},
 
+	-- hint for leader key
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
@@ -90,5 +91,14 @@ return {
 			},
 		},
 	},
+
+	-- autoclosing brackets
+	{
+		'm4xshen/autoclose.nvim',
+		config = function()
+			require("autoclose").setup()
+		end,
+	}
+
 
 }
