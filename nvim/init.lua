@@ -6,12 +6,12 @@ require("config.lazy")
 require("config.settings")
 
 -- plugins configs
--- require("config.dap")
--- require("config.neogit")
 require("config.keymaps")
 require("config.lsp")
 require("config.mason")
--- require("config.cmp")
+require("config.cmp")
+require("config.neotree")
+require("config.lualine")
 
 -- theme
 require("config.gruvbox")
