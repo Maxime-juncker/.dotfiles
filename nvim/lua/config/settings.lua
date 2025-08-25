@@ -12,3 +12,10 @@ vim.api.nvim_set_hl(0, 'CursorLine', { default = false, bg = "#2c323c" })
 
 vim.opt.termguicolors = true
 
+vim.diagnostic.config({
+  virtual_text = true,      -- show inline error messages
+  signs = true,             -- show in sign column
+  underline = true,         -- underline in code
+  update_in_insert = false, -- disable updates in insert mode
+  severity_sort = true,     -- sort by error severity
+})

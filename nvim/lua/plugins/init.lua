@@ -98,7 +98,12 @@ return {
 		config = function()
 			require("autoclose").setup()
 		end,
-	}
+	},
 
+
+	-- discord presence
+	{
+		'andweeb/presence.nvim',
+	},
 
 }
