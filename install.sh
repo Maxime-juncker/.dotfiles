@@ -1,28 +1,8 @@
 #!/bin/bash
 
-# Ensure system is up to date
-sudo dnf update -y
+sudo apt update && sudo apt upgrade -y
 
-# Install required dependencies
-sudo dnf install -y curl git procps
-
-# Download and install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Add Homebrew to the shell profile
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
-
-# Apply changes
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Verify installation
-brew --version
-
-
-# install brew
-brew install zsh
-
-# installing omz
+sudo apt-get install neovim -y
+sudo apt-get install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
