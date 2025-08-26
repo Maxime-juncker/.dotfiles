@@ -13,6 +13,7 @@ require("config.cmp")
 require("config.neotree")
 require("config.lualine")
 require("config.presence")
+require("config.treesiter")
 
 -- theme
 require("config.gruvbox")

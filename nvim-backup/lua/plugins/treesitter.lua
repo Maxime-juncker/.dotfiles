@@ -1,18 +1,18 @@
 return
 {
 	{
-  "nvim-treesitter/playground",
-  cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor" },
-  config = function()
-    require("nvim-treesitter.configs").setup({
-      playground = {
-        enable = true,
-        updatetime = 25, -- Debounced time for highlighting nodes
-        persist_queries = false, -- Don't persist queries across sessions
-      },
-    })
-  end,
-},
+		"nvim-treesitter/playground",
+		cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor" },
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				playground = {
+					enable = true,
+					updatetime = 25, -- Debounced time for highlighting nodes
+					persist_queries = false, -- Don't persist queries across sessions
+				},
+			})
+		end,
+	},
 
 	{
 		'nvim-treesitter/nvim-treesitter',

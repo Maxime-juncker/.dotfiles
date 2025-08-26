@@ -20,6 +20,8 @@ return {
 		lazy = false,
 	},
 
+	  {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
+
 	-- lsp stuff
 	{
 		"neovim/nvim-lspconfig", tag = 'v2.4.0',
