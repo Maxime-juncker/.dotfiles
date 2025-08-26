@@ -7,8 +7,8 @@ require("config.settings")
 
 -- plugins configs
 require("config.keymaps")
-require("config.lsp")
 require("config.mason")
+require("config.lsp")
 require("config.cmp")
 require("config.neotree")
 require("config.lualine")

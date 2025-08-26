@@ -7,9 +7,16 @@ sudo apt-get install curl
 sudo apt-get install ripgrep -y
 sudo apt-get install fd-find -y
 
+# homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo << eof >> ~/.zshrc
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+eof
 
-sudo apt-get install neovim -y
-sudo apt-get install zsh -y
+/home/linuxbrew/.linuxbrew/bin/brew install neovim
+/home/linuxbrew/.linuxbrew/bin/brew install zsh
+
+# oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 bash ./setup.sh

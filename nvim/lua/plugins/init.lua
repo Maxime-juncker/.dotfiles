@@ -1,6 +1,12 @@
 return {
 	"ellisonleao/gruvbox.nvim",
 
+	{
+		"vhyrro/luarocks.nvim",
+		priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+		config = true,
+	},
+
 	-- telescope
 	{
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',

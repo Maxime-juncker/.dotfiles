@@ -1,4 +1,3 @@
-vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.wo.relativenumber = true
 vim.opt.expandtab = false	-- Use tabs instead of spaces
 vim.opt.tabstop = 4			-- Number of spaces that a Tab counts for

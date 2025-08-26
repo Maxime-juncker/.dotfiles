@@ -105,4 +105,4 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
 export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
-
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
