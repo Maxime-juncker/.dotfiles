@@ -1,7 +1,8 @@
 #!/bin/bash
 
 sudo apt update && sudo apt upgrade -y
-sudo apt-get install curl
+sudo apt-get install curl -y
+sudo apt-get install valgrind -y
 
 # for neovim
 sudo apt-get install ripgrep -y

@@ -1,5 +1,13 @@
 return {
-	"ellisonleao/gruvbox.nvim",
+
+	-- color themes
+	{
+		"zaldih/themery.nvim", -- theme picker
+		"ellisonleao/gruvbox.nvim",
+		'projekt0n/github-nvim-theme',
+		'catppuccin/nvim',
+		"vague2k/vague.nvim",
+	},
 
 	{
 		"vhyrro/luarocks.nvim",

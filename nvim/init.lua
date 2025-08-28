@@ -14,6 +14,8 @@ require("config.neotree")
 require("config.lualine")
 require("config.presence")
 require("config.treesiter")
+require("config.themery")
+require("config.dap")
 
 -- theme
 require("config.gruvbox")

@@ -33,6 +33,6 @@ require("lazy").setup({
     -- import your plugins
     { import = "plugins" },
   },
-  install = { colorscheme = { "gruvbox" } },
+  install = { colorscheme = { "github_dark_default" } },
   checker = { enabled = true },
 })
