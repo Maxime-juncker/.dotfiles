@@ -16,6 +16,7 @@ require("config.presence")
 require("config.treesiter")
 require("config.themery")
 require("config.dap")
+require("config.telescope")
 
 -- theme
 require("config.gruvbox")

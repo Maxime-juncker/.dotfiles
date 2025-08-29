@@ -6,11 +6,12 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Telescope help tags' })
-vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Telescope help tags' })
--- file browser
-vim.keymap.set("n", "<space>fb", ":Telescope file_browser<CR>")
--- vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Telescope man' })
+vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Telescope commands' })
+vim.keymap.set("n", '<leader>fb', ":Telescope file_browser<CR>")
+vim.keymap.set('n', '<leader>fd', "<cmd>Telescope diagnostics<cr>")
+vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'find symbols' })
+vim.keymap.set('n', '<Leader>fr', builtin.lsp_references, { desc = 'find references' })
 
 --
 -- neotree
@@ -46,7 +47,6 @@ vim.keymap.set('n', '<leader>ts', '<Cmd>Themery<CR>', { noremap = true, silent =
 vim.keymap.set('n', '<leader>do', vim.diagnostic.open_float, { desc = "open float"})
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = "goto prev" })
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = "goto next" })
-vim.keymap.set('n', '<leader>dl', "<cmd>Telescope diagnostics<cr>")
 vim.api.nvim_create_autocmd('LspAttach',
 {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
