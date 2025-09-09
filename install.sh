@@ -7,6 +7,7 @@ sudo apt-get install valgrind -y
 # for neovim
 sudo apt-get install ripgrep -y
 sudo apt-get install fd-find -y
+sudo apt-get install cppman -y
 
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

@@ -83,3 +83,18 @@ vim.keymap.set('n', '<Leader>dW', function()
 	local expr = vim.fn.input('Expression: ')
 	require('dapui').elements.watches.add(expr)
 end, { desc = "Debug: Add Watch (UI)" })
+
+--
+-- cppman
+--
+vim.keymap.set("n", "<leader>cm", function()
+	require("cppman").open_cppman_for(vim.fn.expand("<cword>"))
+end, { desc = "open cppman" })
+
+-- Open search box
+vim.keymap.set("n", "<leader>cc", function()
+	require("cppman").input()
+end, { desc = "find man page" })
+
+
+

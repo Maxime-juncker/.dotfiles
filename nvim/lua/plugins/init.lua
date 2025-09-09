@@ -122,4 +122,10 @@ return {
 		'andweeb/presence.nvim',
 	},
 
+	-- cppman
+	{
+		'madskjeldgaard/cppman.nvim',
+		dependencies = { 'MunifTanjim/nui.nvim' },
+	},
+
 }
