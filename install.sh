@@ -4,6 +4,12 @@ sudo apt update && sudo apt upgrade -y
 sudo apt-get install curl -y
 sudo apt-get install valgrind -y
 
+# install neofetch
+wget https://github.com/dylanaraps/neofetch/archive/master.zip
+unzip master.zip
+cd neofetch-master
+sudo make install
+
 # for neovim
 sudo apt-get install ripgrep -y
 sudo apt-get install fd-find -y

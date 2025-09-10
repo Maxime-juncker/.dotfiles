@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 
 export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
 export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
@@ -109,3 +110,5 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 # Created by `pipx` on 2025-09-08 06:56:28
 export PATH="$PATH:/home/mjuncker/.local/bin"
+
+neofetch
