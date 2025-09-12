@@ -18,3 +18,22 @@ vim.diagnostic.config({
   update_in_insert = false, -- disable updates in insert mode
   severity_sort = true,     -- sort by error severity
 })
+
+--
+-- toggle trailing whitespace visibility
+--
+
+local id = -1
+local function toggle_whitespace()
+	if id == -1 then
+        id = vim.fn.matchadd("ExtraWhitespace", [[\s\+$]])
+	else
+        vim.fn.matchdelete(id)
+		id = -1
+	end
+end
+
+
+vim.api.nvim_set_hl(0, "ExtraWhitespace", { ctermbg = "darkred", bg = "darkred" })
+vim.keymap.set('n', '<leader>tw', toggle_whitespace, { desc = "toggle trailing whitespace" })
+
