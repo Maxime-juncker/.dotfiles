@@ -68,6 +68,9 @@ else
     echo neovim OK
 fi
 
+#
+# neovim
+#
 mkdir -p $DIR/neovim
 if [ "$(ls -A $DIR/neovim)" ]; then
     echo "neovim directory is not empty, skipping"
@@ -83,14 +86,17 @@ else
     echo neovim OK
 fi
 
-mkdir -p $DIR/discord
-if [ "$(ls -A $DIR/discord)" ]; then
+#
+# discord
+#
+mkdir -p $DIR/Discord
+if [ "$(ls -A $DIR/Discord)" ]; then
     echo "discord directory is not empty, skipping"
 else
     echo downlading discord
     curl -L https://discord.com/api/download\?platform\=linux\&format\=tar.gz --output $DIR/discord.tar.gz
     echo extracting discord
-    tar -xvzf $DIR/discord.tar.gz -C $DIR
+    tar -xvzf $DIR/discord.tar.gz -C $DIR > /dev/null
     rm $DIR/discord.tar.gz
 
     ln -fns $DIR/Discord/Discord $BIN_DIR/discord
@@ -100,6 +106,18 @@ else
     xdg-mime default org.kde.dolphin.desktop inode/directory
 
     echo discord OK
+fi
+
+#
+# neofetch
+#
+mkdir -p $DIR/neofetch
+if [ "$(ls -A $DIR/neofetch)" ]; then
+    echo "neofetch directory is not empty, skipping"
+else	
+    git clone https://github.com/dylanaraps/neofetch $DIR/neofetch
+	ln -fns $DIR/neofetch/neofetch $BIN_DIR/neofetch
+    echo neofetch OK
 fi
 
 printf "setting up sym links\n"
