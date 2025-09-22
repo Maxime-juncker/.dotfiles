@@ -7,6 +7,15 @@ mkdir -p $DIR
 mkdir -p $BIN_DIR
 
 #
+# installing zsh (requiere root)
+#
+if command -v zsh >/dev/null 2>&1; then
+    echo "zsh is available, skipping"
+else
+	sudo apt install zsh
+fi
+
+#
 # installing oh-my-zsh
 #
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
