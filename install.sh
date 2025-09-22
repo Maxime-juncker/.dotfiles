@@ -10,9 +10,10 @@ mkdir -p $BIN_DIR
 # installing zsh (requiere root)
 #
 if command -v zsh >/dev/null 2>&1; then
-    echo "zsh is available, skipping"
+	echo "zsh is available, skipping"
 else
 	sudo apt install zsh
+	chsh -s $(which zsh)
 fi
 
 #
