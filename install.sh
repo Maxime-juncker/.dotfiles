@@ -6,6 +6,14 @@ BIN_DIR="$HOME/.local/bin"
 mkdir -p $DIR
 mkdir -p $BIN_DIR
 
+# installing deps
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install curl -y
+sudo apt-get install valgrind -y
+sudo apt-get install ripgrep -y
+sudo apt-get install fd-find -y
+sudo apt-get install cppman -y
+
 #
 # installing zsh (requiere root)
 #
@@ -24,6 +32,7 @@ if [ "$(ls -A $HOME/.oh-my-zsh/custom/themes/powerlevel10k)" ]; then
     echo "powerlevel10k directory is not empty, skipping"
 else
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+	# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 fi
 
 #
