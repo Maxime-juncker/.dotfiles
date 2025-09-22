@@ -111,14 +111,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-export PATH="/home/mjuncker/sgoinfre/Discord:/home/mjuncker/sgoinfre/nvim/bin:$PATH"
-export PATH="$HOME/sgoinfre/fastfetch/build:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/home/mjuncker/sgoinfre/apps/bin:$PATH"
 
-# Created by `pipx` on 2025-09-08 06:56:28
-export PATH="$PATH:/home/mjuncker/.local/bin"
-
-neofetch
+#neofetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
