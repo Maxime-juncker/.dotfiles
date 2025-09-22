@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color # for ssh
 
 export PATH="/home/mjuncker/sgoinfre/apps/bin:$PATH"
+export PATH="/home/mjuncker/.local/bin:$PATH"
 
 neofetch
 
