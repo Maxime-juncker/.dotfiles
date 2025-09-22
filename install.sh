@@ -7,6 +7,16 @@ mkdir -p $DIR
 mkdir -p $BIN_DIR
 
 #
+# installing oh-my-zsh
+#
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ "$(ls -A $HOME/.oh-my-zsh/custom/themes/powerlevel10k)" ]; then
+    echo "powerlevel10k directory is not empty, skipping"
+else
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+fi
+
+#
 # intall homebrew
 #
 mkdir -p $DIR/homebrew
@@ -23,15 +33,6 @@ else
     ln -fns $DIR/homebrew/bin/brew $BIN_DIR/brew
 fi
 
-#
-# installing oh-my-zsh
-#
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-if [ "$(ls -A $HOME/.oh-my-zsh/custom/themes/powerlevel10k)" ]; then
-    echo "powerlevel10k directory is not empty, skipping"
-else
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-fi
 #
 # install kitty
 #
