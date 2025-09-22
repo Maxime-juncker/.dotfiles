@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIR="$HOME"
-BIN_DIR="$DIR/bin"
+DIR="$HOME/.local"
+BIN_DIR="$HOME/.local/bin"
 
 mkdir -p $DIR
 mkdir -p $BIN_DIR
