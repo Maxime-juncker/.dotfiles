@@ -128,4 +128,8 @@ return {
 		dependencies = { 'MunifTanjim/nui.nvim' },
 	},
 
+	{
+		'wakatime/vim-wakatime', lazy = false
+	},
+
 }
