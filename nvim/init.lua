@@ -17,6 +17,7 @@ require("config.treesiter")
 require("config.themery")
 require("config.dap")
 require("config.telescope")
+require("config.autopair")
 
 -- theme
 require("config.gruvbox")

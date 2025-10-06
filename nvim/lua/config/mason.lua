@@ -4,6 +4,11 @@ require("mason-tool-installer").setup({
 		"codelldb",
 		"cpptools",		-- dap debuger
 		"phpactor",
+		"tailwindcss-language-server",
+		"css-lsp",
+		"emmet-ls",
+		"html-lsp",
+		"typescript-language-server"
 	},
 	auto_update = true,
 	run_on_start = true,

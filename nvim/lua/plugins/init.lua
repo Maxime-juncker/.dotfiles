@@ -52,6 +52,8 @@ return {
 		'hrsh7th/cmp-cmdline',
 		'hrsh7th/nvim-cmp',
 
+		'onsails/lspkind-nvim', -- pictograms
+
 		-- snippets
 		'hrsh7th/cmp-vsnip',
 		'hrsh7th/vim-vsnip',
@@ -108,30 +110,40 @@ return {
 		},
 	},
 
+	--
 	-- autoclosing brackets
+	--
 	{
-		'm4xshen/autoclose.nvim',
-		config = function()
-			require("autoclose").setup()
-		end,
+		'windwp/nvim-autopairs',
+		'windwp/nvim-ts-autotag',
 	},
 
-
+	--
 	-- discord presence
+	--
 	{
 		'andweeb/presence.nvim',
 	},
 
+	--
 	-- cppman
+	--
 	{
 		'madskjeldgaard/cppman.nvim',
 		dependencies = { 'MunifTanjim/nui.nvim' },
 	},
+	
 
+	--
+	-- wakatime dashboard
+	--
 	{
 		'wakatime/vim-wakatime', lazy = false
 	},
 
+	--
+	-- 42 norminette
+	--
 	{
 		"hardyrafael17/norminette42.nvim",
 		config = function()
