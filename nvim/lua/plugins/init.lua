@@ -132,4 +132,13 @@ return {
 		'wakatime/vim-wakatime', lazy = false
 	},
 
+	{
+		"hardyrafael17/norminette42.nvim",
+		config = function()
+			require("norminette").setup({
+				active = true,
+			})
+		end,
+	},
+
 }

@@ -115,6 +115,7 @@ export TERM=xterm-256color # for ssh
 export PATH="/home/mjuncker/sgoinfre/apps/bin:$PATH"
 export PATH="/home/mjuncker/.local/bin:$PATH"
 
+export PATH=~/.npm-global/bin:$PATH
 neofetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -21,3 +21,9 @@ require("config.telescope")
 -- theme
 require("config.gruvbox")
 
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("NorminetteDisable")
+  end,
+})
