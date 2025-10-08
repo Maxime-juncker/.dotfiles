@@ -63,7 +63,7 @@ end,
 
 
 -- dap ---
-vim.keymap.set('n', '<Leader>dn', 	function() require('dap').continue() end, { desc = "launch no build" })
+vim.keymap.set('n', '<F5>', 	function() require('dap').continue() end, { desc = "launch no build" })
 vim.keymap.set('n', '<F10>',		function() require('dap').step_over() end, { desc = "Debug: Step Over" })
 vim.keymap.set('n', '<F11>',		function() require('dap').step_into() end, { desc = "Debug: Step Into" })
 vim.keymap.set('n', '<F12>',		function() require('dap').step_out() end, { desc = "Debug: Step Out" })

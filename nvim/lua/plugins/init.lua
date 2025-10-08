@@ -7,6 +7,7 @@ return {
 		'projekt0n/github-nvim-theme',
 		'catppuccin/nvim',
 		"vague2k/vague.nvim",
+		"navarasu/onedark.nvim",
 	},
 
 	{

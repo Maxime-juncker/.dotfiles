@@ -21,6 +21,7 @@ require("config.autopair")
 
 -- theme
 require("config.gruvbox")
+require("theme.onedark")
 
 
 vim.api.nvim_create_autocmd("VimEnter", {
@@ -28,3 +29,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("NorminetteDisable")
   end,
 })
+
