@@ -18,6 +18,7 @@ require("config.themery")
 require("config.dap")
 require("config.telescope")
 require("config.autopair")
+require("config.anim")
 
 -- theme
 require("config.gruvbox")
