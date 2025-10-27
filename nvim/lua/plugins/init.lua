@@ -77,8 +77,15 @@ return {
 	-- top bar
 	{
 		'nvim-tree/nvim-web-devicons',
-		'lewis6991/gitsigns.nvim',
 		'romgrk/barbar.nvim',
+	},
+
+	--
+	-- git integration
+	--
+	{
+		'sindrets/diffview.nvim',
+		'lewis6991/gitsigns.nvim',
 	},
 
 	-- dashboard
@@ -154,10 +161,13 @@ return {
 		end,
 	},
 
+	--
+	-- Animations
+	--
 	{
 
 		"nvim-mini/mini.animate",
-
 	},
+
 
 }
