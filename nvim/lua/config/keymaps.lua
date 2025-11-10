@@ -101,8 +101,6 @@ vim.keymap.set('n', '<Leader>nd',	"<Cmd>NorminetteDisable<Cr>")
 vim.keymap.set('n', '<Leader>ne',	"<Cmd>NorminetteEnable<Cr>")
 
 
-
-
 vim.keymap.set('n', '<Leader>go', "<Cmd>DiffviewOpen<Cr>", { desc = "open diffview" })
 vim.keymap.set('n', '<Leader>gc', "<Cmd>DiffviewClose<Cr>", { desc = "close diffview" })
 vim.keymap.set('n', '<Leader>gt', "<Cmd>DiffviewFileHistory<Cr>", { desc = "branch history" })
