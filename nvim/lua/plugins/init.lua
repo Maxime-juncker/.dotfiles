@@ -231,4 +231,9 @@ return {
 		},
 	},
 
+	-- for hex color
+	{
+		'brenoprata10/nvim-highlight-colors',
+	},
+
 }

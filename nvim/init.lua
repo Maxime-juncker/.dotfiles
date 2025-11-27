@@ -14,16 +14,16 @@ require("config.neotree")
 require("config.lualine")
 require("config.presence")
 require("config.treesiter")
-require("config.themery")
 require("config.dap")
 require("config.telescope")
 require("config.autopair")
 require("config.anim")
+require("config.highlight")
 
 -- theme
 require("config.gruvbox")
 require("theme.onedark")
-
+require("config.themery")
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()

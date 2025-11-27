@@ -14,6 +14,11 @@ return {
 
 	ts_ls = {
 		capabilities = capabilities,
+		on_attach = function(client, bufnr)
+			-- Disable document formatting if you want manual control
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+		end,
 		settings = {
 			typescript = {
 				inlayHints = {
@@ -49,6 +54,8 @@ return {
 			"typescript.tsx"
 		},
 	},
+
+	tailwindcss = {},
 
 	emmet_ls = {
 		filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
