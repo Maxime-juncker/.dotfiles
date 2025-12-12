@@ -1,7 +1,8 @@
 require("themery").setup({
 	themes = {
 		"gruvbox",
-		"vague",
+		"vscode",
+		"visual_studio_code",
 		"onedark",
 		"github_dark",
 		"github_dark_default",

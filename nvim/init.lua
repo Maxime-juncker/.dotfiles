@@ -17,7 +17,7 @@ require("config.treesiter")
 require("config.dap")
 require("config.telescope")
 require("config.autopair")
-require("config.anim")
+-- require("config.anim")
 require("config.highlight")
 
 -- theme

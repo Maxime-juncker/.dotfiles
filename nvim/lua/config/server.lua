@@ -6,12 +6,6 @@ return {
 		cmd = {"clangd"},
 	},
 
-	-- ts_ls = {
-	--   on_attach = on_attach,
-	--   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-	--   cmd = { "typescript-language-server", "--stdio" }
-	-- },
-
 	ts_ls = {
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)

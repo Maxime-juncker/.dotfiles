@@ -8,6 +8,8 @@ return {
 		'catppuccin/nvim',
 		"vague2k/vague.nvim",
 		"navarasu/onedark.nvim",
+		"Mofiqul/vscode.nvim",
+		"askfiy/visual_studio_code",
 	},
 
 	{
@@ -164,10 +166,10 @@ return {
 	--
 	-- Animations
 	--
-	{
-
-		"nvim-mini/mini.animate",
-	},
+	-- {
+	--
+	-- 	"nvim-mini/mini.animate",
+	-- },
 
 	{
 		'isakbm/gitgraph.nvim',
