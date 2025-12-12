@@ -79,7 +79,7 @@ return {
 	-- top bar
 	{
 		'nvim-tree/nvim-web-devicons',
-		'romgrk/barbar.nvim',
+		-- 'romgrk/barbar.nvim',
 	},
 
 	--
@@ -237,5 +237,23 @@ return {
 	{
 		'brenoprata10/nvim-highlight-colors',
 	},
+
+	-- outliner explorer
+	{
+		'stevearc/aerial.nvim',
+		opts = {},
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons"
+		},
+	},
+
+	{
+		'akinsho/bufferline.nvim',
+		version = "*",
+		dependencies = 'nvim-tree/nvim-web-devicons'
+	},
+
 
 }

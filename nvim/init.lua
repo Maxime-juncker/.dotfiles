@@ -17,12 +17,15 @@ require("config.treesiter")
 require("config.dap")
 require("config.telescope")
 require("config.autopair")
--- require("config.anim")
 require("config.highlight")
+require("config.aerial")
+require("config.bufferline")
 
 -- theme
 require("config.gruvbox")
 require("theme.onedark")
+require("theme.vscode")
+require("theme.telescope")
 require("config.themery")
 
 vim.api.nvim_create_autocmd("VimEnter", {
