@@ -255,5 +255,10 @@ return {
 		dependencies = 'nvim-tree/nvim-web-devicons'
 	},
 
+	-- scroll view
+	{
+		"dstein64/nvim-scrollview",
+	},
+
 
 }

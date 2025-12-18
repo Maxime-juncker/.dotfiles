@@ -22,8 +22,8 @@ vim.keymap.set('n', '<leader>E', '<Cmd>Neotree<CR>')
 --
 -- top bar
 --
-vim.keymap.set('n', '<A-,>', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<A-.>', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-,>', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-.>', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-c>', '<Cmd>bdelete<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bp", "<cmd>BufferLinePick<CR>", { silent = true })
 
@@ -101,6 +101,9 @@ vim.api.nvim_set_hl(0, "DiffDelete", {bg = "#37222c"})
 vim.api.nvim_set_hl(0, "DiffChange", {bg = "#1f2231"})
 vim.api.nvim_set_hl(0, "DiffText", {bg = "#394b70"})
 
-
-
+-- arial panel (navigate functions)
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+
+-- open diagnostic
+vim.keymap.set('n', '<leader>td', vim.diagnostic.open_float, { desc = "open diagnostic" })
+
