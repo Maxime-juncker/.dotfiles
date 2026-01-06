@@ -141,3 +141,5 @@ touch() {
         command touch "$@"
     fi
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

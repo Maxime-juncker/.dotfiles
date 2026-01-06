@@ -1,17 +1,16 @@
 --
 -- telescope
 --
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Telescope man' })
-vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = 'Telescope commands' })
-vim.keymap.set("n", '<leader>fb', ":Telescope file_browser<CR>")
-vim.keymap.set('n', '<leader>fd', "<cmd>Telescope diagnostics<cr>")
-vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'find symbols' })
-vim.keymap.set('n', '<Leader>fr', builtin.lsp_references, { desc = 'find references' })
+local fzf = require('fzf-lua')
+
+vim.keymap.set('n', '<leader>ff', fzf.files, { desc = 'find files' })
+vim.keymap.set('n', '<leader>fg', fzf.live_grep, { desc = 'live grep' })
+vim.keymap.set('n', '<leader>fb', fzf.buffers, { desc = 'search buffers' })
+vim.keymap.set('n', '<leader>fm', fzf.man_pages, { desc = 'man pages' })
+vim.keymap.set('n', '<leader>fc', fzf.commands, { desc = 'search commands' })
+vim.keymap.set('n', '<leader>fd', fzf.diagnostics_document, { desc = 'search diagnostics' })
+vim.keymap.set('n', '<leader>fs', fzf.lsp_document_symbols, { desc = 'find symbols' })
+vim.keymap.set('n', '<Leader>fr', fzf.lsp_references, { desc = 'find references' })
 
 --
 -- neotree

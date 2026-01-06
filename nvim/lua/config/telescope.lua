@@ -9,5 +9,9 @@ require('telescope').setup({
 			-- theme = "dropdown",
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 		},
+		live_grep = {
+			theme = "ivy", -- or "dropdown", "cursor"
+		}
+
 	},
 })
