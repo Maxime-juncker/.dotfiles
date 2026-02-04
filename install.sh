@@ -7,9 +7,10 @@ sudo apt-get install valgrind -y
 sudo apt-get install ripgrep -y
 sudo apt-get install fd-find -y
 sudo apt-get install cppman -y
+sudo apt-get install build-essential -y
 
 # install zsh
-sudo apt install zsh
+sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # set conf files
