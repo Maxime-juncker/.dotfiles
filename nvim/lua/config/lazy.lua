@@ -34,5 +34,5 @@ require("lazy").setup({
     { import = "plugins" },
   },
   install = { colorscheme = { "github_dark_default" } },
-  checker = { enabled = true },
+  checker = { enabled = false },
 })

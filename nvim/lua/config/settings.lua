@@ -19,4 +19,6 @@ vim.diagnostic.config({
   severity_sort = true,     -- sort by error severity
 })
 
+vim.opt.clipboard:append("unnamedplus")
+
 vim.cmd('set listchars=eol:↵,trail:~,tab:>-,nbsp:␣')

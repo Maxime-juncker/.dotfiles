@@ -57,7 +57,7 @@ return {
 
 	html = {
 		capabilities = capabilities,
-		filetypes = { "html", "templ" },
+		filetypes = { "html", "templ", "vue" },
 	},
 
 	cssls = {
