@@ -1,6 +1,6 @@
 require('onedark').setup  {
 	-- Main options --
-	style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+	style = 'warmer', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
 	transparent = false,  -- Show/hide background
 	term_colors = true, -- Change terminal color as per the selected theme style
 	ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
@@ -28,12 +28,13 @@ require('onedark').setup  {
 
 	-- Custom Highlights --
 	colors = {
-		bg0 = "#10141a",
-		bg1 = "#10141a",
+		-- bg0 = "#10141a",
+		-- bg1 = "#10141a",
+		-- fg = "#FBF1C7",
 	},
 	highlights = {
-		    CursorLine = { bg = "#2C313C" },
-    CursorLineNr = { fg = "#E5C07B", bold = true },
+		CursorLine = { bg = "#2C313C" },
+		CursorLineNr = { fg = "#E5C07B", bold = true },
 	},
 
 	-- Plugins Config --
