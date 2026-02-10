@@ -261,16 +261,65 @@ return {
 	},
 
 	{
-  "ibhagwan/fzf-lua",
-  -- optional for icon support
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  -- or if using mini.icons/mini.nvim
-  -- dependencies = { "nvim-mini/mini.icons" },
-  ---@module "fzf-lua"
-  ---@type fzf-lua.Config|{}
-  ---@diagnostic disable: missing-fields
-  opts = {}
-  ---@diagnostic enable: missing-fields
-}
+		"ibhagwan/fzf-lua",
+		-- optional for icon support
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		-- or if using mini.icons/mini.nvim
+		-- dependencies = { "nvim-mini/mini.icons" },
+		---@module "fzf-lua"
+		---@type fzf-lua.Config|{}
+		---@diagnostic disable: missing-fields
+		opts = {}
+		---@diagnostic enable: missing-fields
+	},
+
+	{
+		"sphamba/smear-cursor.nvim",
+		opts = {
+			stiffness = 0.5,
+			trailing_stiffness = 0.5,
+			matrix_pixel_threshold = 0.5,
+		},
+	},
+
+	{
+		"folke/trouble.nvim",
+		opts = {}, -- for default options, refer to the configuration section for custom setup.
+		cmd = "Trouble",
+		keys = {
+			{
+				"<leader>xx",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+			{
+				"<leader>xX",
+				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+				desc = "Buffer Diagnostics (Trouble)",
+			},
+			{
+				"<leader>cs",
+				"<cmd>Trouble symbols toggle focus=false<cr>",
+				desc = "Symbols (Trouble)",
+			},
+			{
+				"<leader>cl",
+				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+				desc = "LSP Definitions / references / ... (Trouble)",
+			},
+			{
+				"<leader>xL",
+				"<cmd>Trouble loclist toggle<cr>",
+				desc = "Location List (Trouble)",
+			},
+			{
+				"<leader>xQ",
+				"<cmd>Trouble qflist toggle<cr>",
+				desc = "Quickfix List (Trouble)",
+			},
+		},
+	},
+
+
 
 }
