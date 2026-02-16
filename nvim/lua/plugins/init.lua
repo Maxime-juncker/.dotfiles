@@ -186,7 +186,6 @@ return {
 	-- Animations
 	--
 	-- {
-	--
 	-- 	"nvim-mini/mini.animate",
 	-- },
 
@@ -291,6 +290,10 @@ return {
 		opts = {}
 		---@diagnostic enable: missing-fields
 	},
+
+	-- {
+	-- 	'psliwka/vim-smoothie',
+	-- },
 
 	{
 		"sphamba/smear-cursor.nvim",
