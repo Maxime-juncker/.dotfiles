@@ -18,13 +18,6 @@ return {
 		config = true,
 	},
 
-	-- telescope
-	{
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		'nvim-telescope/telescope-file-browser.nvim',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
-
 	-- file tree
 	{
 		"nvim-neo-tree/neo-tree.nvim",
