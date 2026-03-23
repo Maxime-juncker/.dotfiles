@@ -1,9 +1,12 @@
 require("themery").setup({
 	themes = {
+		"coolTheme",
 		"gruvbox",
+		"retrobox",
 		"vscode",
 		"visual_studio_code",
 		"onedark",
+		"kanagawa-dragon",
 		"github_dark",
 		"github_dark_default",
 		"github_dark_high_contrast",

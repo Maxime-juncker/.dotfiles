@@ -1,5 +1,12 @@
 return {
 
+	-- local theme dev
+	-- {
+	-- 	dir = "~/github/cool-theme",
+	-- 	name = "coolTheme",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- },
 	-- color themes
 	{
 		"zaldih/themery.nvim", -- theme picker
@@ -10,6 +17,8 @@ return {
 		"navarasu/onedark.nvim",
 		"Mofiqul/vscode.nvim",
 		"askfiy/visual_studio_code",
+		"rebelot/kanagawa.nvim",
+		"Maxime-juncker/coolTheme",
 	},
 
 	{
@@ -334,7 +343,5 @@ return {
 			},
 		},
 	},
-
-
 
 }

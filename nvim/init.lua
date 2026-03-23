@@ -31,3 +31,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("NorminetteDisable")
   end,
 })
+vim.opt.smartindent = false
+-- vim.cmd("colorscheme coolTheme")

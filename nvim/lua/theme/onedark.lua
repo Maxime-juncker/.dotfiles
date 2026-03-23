@@ -33,8 +33,8 @@ require('onedark').setup  {
 		-- fg = "#FBF1C7",
 	},
 	highlights = {
-		CursorLine = { bg = "#2C313C" },
-		CursorLineNr = { fg = "#E5C07B", bold = true },
+		-- CursorLine = { bg = "#2C313C" },
+		-- CursorLineNr = { fg = "#E5C07B", bold = true },
 	},
 
 	-- Plugins Config --

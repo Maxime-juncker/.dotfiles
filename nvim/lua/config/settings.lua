@@ -4,9 +4,14 @@ vim.opt.tabstop = 4			-- Number of spaces that a Tab counts for
 vim.opt.shiftwidth = 4		-- Number of spaces for each indentation
 vim.opt.softtabstop = 4		-- Number of spaces a Tab feels like
 
+        -- vim.opt_local.cindent = false
+        vim.opt_local.smartindent = true
+
+        -- vim.opt_local.autoindent = true
+
 -- cursor higlight
 vim.opt.cursorline = true  -- Make sure cursorline is enabled
-vim.api.nvim_set_hl(0, 'CursorLine', { default = false, bg = "#2c323c" })
+-- vim.api.nvim_set_hl(0, 'CursorLine', { default = false, bg = "#2c323c" })
 
 
 vim.opt.termguicolors = true
