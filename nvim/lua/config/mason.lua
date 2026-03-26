@@ -3,6 +3,8 @@ require("mason-tool-installer").setup({
 		"clangd",       -- C/C++ language server
 		"codelldb",
 		"cpptools",		-- dap debuger
+	    "prettierd",
+		"clang-format",
 		"phpactor",
 		"tailwindcss-language-server",
 		"css-lsp",

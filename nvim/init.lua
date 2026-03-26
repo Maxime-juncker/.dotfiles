@@ -7,9 +7,6 @@ require("config.settings")
 
 -- plugins configs
 require("config.keymaps")
-require("config.mason")
-require("config.lsp")
-require("config.cmp")
 require("config.neotree")
 require("config.lualine")
 require("config.presence")
@@ -19,6 +16,12 @@ require("config.autopair")
 require("config.highlight")
 require("config.aerial")
 require("config.bufferline")
+
+-- code
+require("config.mason")
+require("config.lsp")
+require("config.cmp")
+require("config.conform")
 
 -- theme
 require("config.gruvbox")

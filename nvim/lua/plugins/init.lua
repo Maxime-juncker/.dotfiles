@@ -344,4 +344,10 @@ return {
 		},
 	},
 
+	-- formting
+	{
+		'stevearc/conform.nvim',
+		opts = {},
+	},
+
 }
