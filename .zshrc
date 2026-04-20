@@ -125,7 +125,8 @@ export PATH=~/.npm-global/bin:$PATH
 # for nm ascii sort
 export LC_COLLATE=C
 
-# neofetch
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$HOME/.dotnet:$HOME/.dotnet/tools:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

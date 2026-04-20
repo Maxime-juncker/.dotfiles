@@ -4,6 +4,35 @@ return {
 		cmd = { "clangd", "--background-index", "--clang-tidy" },
 		filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp" },
 	},
+	omnisharp = {
+		filetypes = { "cs" },
+		root_dir = function(bufnr, on_dir)
+			local root = vim.fs.root(bufnr, {
+				"*.sln",
+				"*.csproj",
+				"omnisharp.json",
+				"global.json",
+				".git",
+			})
+			local fallback = vim.fs.dirname(vim.api.nvim_buf_get_name(bufnr))
+			on_dir(root or fallback)
+		end,
+		settings = {
+			FormattingOptions = {
+				EnableEditorConfigSupport = true,
+				OrganizeImports = true,
+			},
+			RoslynExtensionsOptions = {
+				EnableImportCompletion = true,
+			},
+			MsBuild = {
+				LoadProjectsOnDemand = false,
+			},
+			Sdk = {
+				IncludePrereleases = true,
+			},
+		},
+	},
 	ts_ls = {
 		on_attach = function(client, _)
 			client.server_capabilities.documentFormattingProvider = false
@@ -40,7 +69,7 @@ return {
 		filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
 	},
 	html = {
-		filetypes = { "html", "templ", "vue" },
+		filetypes = { "html", "templ", "vue", "javascriptreact", "typescriptreact"},
 	},
 	cssls = {
 		settings = {
@@ -50,6 +79,3 @@ return {
 		},
 	},
 }
-
-
-

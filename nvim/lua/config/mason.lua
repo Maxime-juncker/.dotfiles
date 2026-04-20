@@ -4,8 +4,10 @@ require("mason-tool-installer").setup({
 		"codelldb",
 		"cpptools",		-- dap debuger
 	    "prettierd",
+		"csharpier",
 		"clang-format",
 		"phpactor",
+		"omnisharp",
 		"tailwindcss-language-server",
 		"css-lsp",
 		"emmet-ls",
