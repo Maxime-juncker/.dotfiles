@@ -66,10 +66,10 @@ return {
 	},
 	tailwindcss = {},
 	emmet_ls = {
-		filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
+		filetypes = { "html","svelte", "css", "scss", "javascriptreact", "typescriptreact" },
 	},
 	html = {
-		filetypes = { "html", "templ", "vue", "javascriptreact", "typescriptreact"},
+		filetypes = { "html", "svelte", "templ", "vue", "javascriptreact", "typescriptreact"},
 	},
 	cssls = {
 		settings = {
@@ -78,4 +78,24 @@ return {
 			less = { validate = true },
 		},
 	},
+svelte = {
+    on_attach = function(client, bufnr)
+        -- Auto-notify svelte-ls when ts/js files change,
+        -- so it picks up changes in imported TS files
+        vim.api.nvim_create_autocmd("BufWritePost", {
+            pattern = { "*.js", "*.ts" },
+            callback = function(ctx)
+                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+            end,
+        })
+    end,
+    settings = {
+        svelte = {
+            plugin = {
+                html = { completions = { enable = true, emmet = false } },
+                svelte = { defaultScriptLanguage = "ts" },
+            },
+        },
+    },
+},
 }

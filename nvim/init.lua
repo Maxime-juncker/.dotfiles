@@ -15,7 +15,7 @@ require("config.dap")
 require("config.autopair")
 require("config.highlight")
 require("config.aerial")
-require("config.bufferline")
+-- require("config.bufferline")
 
 -- code
 require("config.mason")

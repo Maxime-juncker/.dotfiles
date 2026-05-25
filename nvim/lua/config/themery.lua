@@ -1,6 +1,8 @@
 require("themery").setup({
 	themes = {
+		"visualStudio",
 		"coolTheme",
+		"moonfly",
 		"gruvbox",
 		"retrobox",
 		"vscode",

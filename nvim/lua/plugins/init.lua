@@ -2,8 +2,8 @@ return {
 
 	-- local theme dev
 	-- {
-	-- 	dir = "~/github/cool-theme",
-	-- 	name = "coolTheme",
+	-- 	dir = "~/github/visualStudio",
+	-- 	name = "visualStudio",
 	-- 	lazy = false,
 	-- 	priority = 1000,
 	-- },
@@ -18,7 +18,9 @@ return {
 		"Mofiqul/vscode.nvim",
 		"askfiy/visual_studio_code",
 		"rebelot/kanagawa.nvim",
+		"bluz71/vim-moonfly-colors",
 		"Maxime-juncker/coolTheme",
+		"Maxime-juncker/visualstudio.nvim",
 	},
 
 	{
@@ -271,6 +273,7 @@ return {
 
 	{
 		'akinsho/bufferline.nvim',
+		enabled = false,
 		version = "*",
 		dependencies = 'nvim-tree/nvim-web-devicons'
 	},

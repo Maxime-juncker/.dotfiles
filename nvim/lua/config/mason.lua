@@ -1,6 +1,7 @@
 require("mason-tool-installer").setup({
 	ensure_installed = {
 		"clangd",       -- C/C++ language server
+		"svelte-language-server",
 		"codelldb",
 		"cpptools",		-- dap debuger
 	    "prettierd",
