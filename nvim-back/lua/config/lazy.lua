@@ -4,7 +4,7 @@ vim.g.lazyvim_check_order = false
 vim.g.lazyvim_disable_keymaps   = true   -- disable keymaps (this you already tried)
 vim.g.loaded_lazyvim            = true   -- prevent LazyVim from loading its own config
 vim.g.loaded_lazyvim_config     = true   -- disable additional LazyVim configurations
-vim.g.loaded_lazyvim_keymaps    = true
+vim.g.loaded_lazyvim_keymaps    = true                                                  
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -23,9 +23,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
+-- Set leader keys
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -35,9 +33,6 @@ require("lazy").setup({
     -- import your plugins
     { import = "plugins" },
   },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+  install = { colorscheme = { "github_dark_default" } },
+  checker = { enabled = false },
 })
