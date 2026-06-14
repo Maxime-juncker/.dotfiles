@@ -68,6 +68,8 @@ return {
 		dependencies = { "williamboman/mason.nvim" },
 	},
 
+	{ 'saghen/blink.lib' },
+
 	{
 		'saghen/blink.cmp',
 		-- optional: provides snippets for the snippet source
@@ -96,17 +98,9 @@ return {
 	},
 
 	{
-		'saghen/blink.pairs',
-		dependencies = 'saghen/blink.lib',
-		build = function()
-			-- require("blink.pairs").download():pwait(60000)
-			-- OR:
-			require("blink.pairs").build():pwait(60000)
-		end,
-
-		config = function()
-			require("blink.pairs").setup()
-		end,
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
 	},
 
 	{
