@@ -12,6 +12,7 @@ return {
 		"bluz71/vim-moonfly-colors",
 		"Maxime-juncker/coolTheme",
 		"Maxime-juncker/visualstudio.nvim",
+		'dasupradyumna/midnight.nvim'
 	},
 
 	-- treesiter
@@ -44,7 +45,6 @@ return {
 			wk.setup({
 				preset = "helix",
 			})
-
 		end,
 	},
 
@@ -56,7 +56,7 @@ return {
 			"MunifTanjim/nui.nvim",
 			"nvim-tree/nvim-web-devicons", -- optional, but recommended
 		},
-		lazy = false, -- neo-tree will lazily load itself
+		lazy = false,             -- neo-tree will lazily load itself
 	},
 
 	{

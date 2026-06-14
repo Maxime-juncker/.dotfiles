@@ -1,7 +1,5 @@
 local fzf = require('fzf-lua')
 
-
-
 vim.keymap.set('n', '<A-,>', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-.>', '<Cmd>BufferLineCycleNext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-c>', '<Cmd>bdelete<CR>', { noremap = true, silent = true })
@@ -41,8 +39,7 @@ end, { desc = "select colorscheme" }
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>')
 vim.keymap.set('n', '<leader>E', '<Cmd>Neotree<CR>')
 
-
-vim.keymap.set('n', '<leader>gl', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = "open diagnostics" })
 
 vim.keymap.set({ "n", "v" }, "<leader>cf", function()
 	require("conform").format({

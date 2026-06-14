@@ -6,9 +6,11 @@ require("config.lazy")
 require("config.settings")
 require("config.keymaps")
 
-
 require("config.mason")
 require("config.lsp")
+require("config.conform")
+-- require("config.treesitter")
+require("config.which-key")
 
 local file = vim.fn.stdpath("data") .. "/colorscheme.txt"
 
