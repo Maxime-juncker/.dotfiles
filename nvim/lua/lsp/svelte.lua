@@ -1,4 +1,4 @@
 return {
-	cmd = { "svelte-language-server", "--stdio" },
+	cmd = { "svelteserver", "--stdio" },
 	filetypes = { "svelte" },
 }

@@ -15,12 +15,23 @@ return {
 		'dasupradyumna/midnight.nvim'
 	},
 
-	-- treesiter
-	{
-		'nvim-treesitter/nvim-treesitter',
-		lazy = false,
-		build = ':TSUpdate'
-	},
+{
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+     branch = 'master',
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = {
+                "lua", "vim", "go", "javascript",
+                "svelte", "typescript", "c",
+                "cpp", "php", "css"
+            },
+            highlight = { enable = true },
+            indent = { enable = true },
+            auto_install = true,
+        })
+    end,
+},
 
 	-- fuzzy finder
 	{
