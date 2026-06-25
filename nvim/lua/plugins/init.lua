@@ -27,7 +27,7 @@ return {
                 "cpp", "php", "css"
             },
             highlight = { enable = true },
-            indent = { enable = true },
+			indent = { enable = false },
             auto_install = true,
         })
     end,
@@ -71,41 +71,33 @@ return {
 	},
 
 	{
-		"williamboman/mason.nvim",
-		build = ":MasonUpdate", -- optional, updates registry
-	},
+    "mason-org/mason.nvim",
+    opts = {}
+},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim" },
 	},
 
-	{ 'saghen/blink.lib' },
+	{
+		"hrsh7th/cmp-nvim-lsp",
+		lazy = false,
+	},
 
 	{
-		'saghen/blink.cmp',
-		-- optional: provides snippets for the snippet source
-		dependencies = { 'rafamadriz/friendly-snippets' },
-
-		-- use a release tag to download pre-built binaries
-		version = '1.*',
-
-		opts = {
-
-			keymap = { preset = 'super-tab' },
-
-			appearance = {
-				nerd_font_variant = 'mono'
-			},
-
-			completion = { documentation = { auto_show = true } },
-
-			sources = {
-				default = { 'lsp', 'path', 'snippets', 'buffer' },
-			},
-
-			fuzzy = { implementation = "prefer_rust_with_warning" }
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"saadparwaiz1/cmp_luasnip",
+			"L3MON4D3/LuaSnip",
+			"rafamadriz/friendly-snippets",
 		},
-		opts_extend = { "sources.default" }
+		config = function()
+			require("config.cmp")
+		end,
 	},
 
 	{
@@ -113,6 +105,8 @@ return {
 		event = "InsertEnter",
 		config = true,
 	},
+
+	{ "saghen/blink.lib" },
 
 	{
 		"saghen/blink.indent",
