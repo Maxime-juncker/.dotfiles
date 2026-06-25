@@ -47,3 +47,19 @@ vim.keymap.set({ "n", "v" }, "<leader>cf", function()
 		async = true,
 	})
 end, { desc = "Format buffer" })
+
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = "goto prev" })
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = "goto next" })
+vim.api.nvim_create_autocmd('LspAttach',
+{
+	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+	callback = function(ev)
+	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = ev.buf, desc = "go to declaration" })
+	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = ev.buf, desc = "go to definition" })
+	vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = ev.buf, desc = "show detail" })
+	vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = ev.buf, desc = "rename" })
+	vim.keymap.set('n', '<leader>df', function()
+		vim.lsp.buf.format { async = true }
+	end, { buffer = ev.buf, desc = ""})
+end,
+})
