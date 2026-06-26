@@ -1,21 +1,38 @@
--- lazy
 
+-- lazy
 require("config.lazy")
 
 -- settings
 require("config.settings")
-require("config.keymaps")
 
+-- plugins configs
+require("config.keymaps")
+require("config.neotree")
+require("config.lualine")
+require("config.presence")
+require("config.treesiter")
+require("config.dap")
+require("config.autopair")
+require("config.highlight")
+require("config.aerial")
+-- require("config.bufferline")
+
+-- code
 require("config.mason")
 require("config.lsp")
+require("config.cmp")
 require("config.conform")
--- require("config.treesitter")
-require("config.which-key")
 
-local file = vim.fn.stdpath("data") .. "/colorscheme.txt"
+-- theme
+require("config.gruvbox")
+require("theme.onedark")
+require("theme.vscode")
+require("config.themery")
 
-local ok, lines = pcall(vim.fn.readfile, file)
-if ok and lines[1] then
-  pcall(vim.cmd.colorscheme, lines[1])
-end
-
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("NorminetteDisable")
+  end,
+})
+vim.opt.smartindent = false
+-- vim.cmd("colorscheme coolTheme")
