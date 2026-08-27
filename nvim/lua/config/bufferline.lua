@@ -1,7 +1,6 @@
-require("bufferline").setup {
-  options = {
-    mode = "buffers",
-    diagnostics = "nvim_lsp",
-  },
-}
+require("bufferline").setup({})
 
+vim.keymap.set("n", "[b", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "]b", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", "<cmd>BufferLinePick<CR>", { desc = "Pick buffer" })
+vim.keymap.set("n", "<leader>bc", "<cmd>bdelete<CR>", { desc = "Close buffer" })

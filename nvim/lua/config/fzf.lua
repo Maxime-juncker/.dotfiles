@@ -1,7 +1,8 @@
-print("Hello")
+local fzf = require("fzf-lua")
 
-require("fzf-lua").setup({
-  grep = {
-    rg_opts = "--column --line-number --no-heading --color=always --smart-case",
-  },
-})
+fzf.setup({})
+
+vim.keymap.set("n", "<leader>ff", fzf.files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "Live grep" })
+vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "Find buffers" })
+vim.keymap.set("n", "<leader>fr", fzf.oldfiles, { desc = "Recent files" })

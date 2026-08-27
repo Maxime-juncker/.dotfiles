@@ -1,38 +1,36 @@
+-- Native settings and keymaps must be loaded before lazy.nvim.
+require("settings")
+require("keymaps")
 
--- lazy
-require("config.lazy")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local uv = vim.uv or vim.loop
 
--- settings
-require("config.settings")
+if not uv.fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local output = vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--branch=stable",
+    lazyrepo,
+    lazypath,
+  })
 
--- plugins configs
-require("config.keymaps")
-require("config.neotree")
-require("config.lualine")
-require("config.presence")
-require("config.treesiter")
-require("config.dap")
-require("config.autopair")
-require("config.highlight")
-require("config.aerial")
--- require("config.bufferline")
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { output, "WarningMsg" },
+      { "\nPress any key to exit...", "ErrorMsg" },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
 
--- code
-require("config.mason")
-require("config.lsp")
-require("config.cmp")
-require("config.conform")
+vim.opt.rtp:prepend(lazypath)
 
--- theme
-require("config.gruvbox")
-require("theme.onedark")
-require("theme.vscode")
-require("config.themery")
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    vim.cmd("NorminetteDisable")
-  end,
+require("lazy").setup({
+  spec = {
+    { import = "plugins" },
+  },
 })
-vim.opt.smartindent = false
--- vim.cmd("colorscheme coolTheme")
