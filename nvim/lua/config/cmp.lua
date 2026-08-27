@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
@@ -13,6 +14,13 @@ cmp.setup({
     { name = "path" },
     { name = "buffer" },
   }),
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      maxwidth = 50,
+      ellipsis_char = "...",
+    }),
+  },
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
