@@ -1,0 +1,37 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["~/.config/opencode/instructions.md"],
+  "mcp": {
+    "gitea": {
+      "type": "local",
+      "command": ["/Users/maxime/go/bin/gitea-mcp", "-t", "stdio"],
+      "environment": {
+        "GITEA_HOST": "https://git.247247.fr",
+        "GITEA_ACCESS_TOKEN": "{env:GITEA_MCP_TOKEN}"
+      },
+      "enabled": true
+    }
+  },
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:1234/v1"
+      },
+      "models": {
+        "qwen3.6-27b-mtp": {
+          "max_tokens": 163684,
+          "context_length": 193663
+        },
+        "prism-ml/bonsai-27b": {
+          "max_tokens": 163684,
+          "context_length": 193663
+        },
+        "qwen3.8-27b": {
+          "max_tokens": 163684,
+          "context_length": 193663
+        }
+      }
+    }
+  }
+}
