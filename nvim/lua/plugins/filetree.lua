@@ -14,6 +14,13 @@ return {
         end,
         desc = "Toggle file tree",
       },
+      {
+        "<leader>ef",
+        function()
+          require("nvim-tree.api").tree.find_file({ open = true, focus = true })
+        end,
+        desc = "Find current file in tree",
+      },
     },
     dependencies = {
       "nvim-tree/nvim-web-devicons",

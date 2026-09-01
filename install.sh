@@ -28,6 +28,7 @@ update_sys()
 		arch|manjaro)
 			sudo pacman -Syu --noconfirm
 			;;
+	esac
 }
 
 install_packages() {
