@@ -2,6 +2,10 @@ local cmp = require("cmp")
 local lspkind = require("lspkind")
 
 cmp.setup({
+  preselect = cmp.PreselectMode.None,
+  completion = {
+    completeopt = "menu,menuone,noinsert",
+  },
   mapping = cmp.mapping.preset.insert({
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),

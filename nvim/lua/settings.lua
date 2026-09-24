@@ -17,3 +17,5 @@ vim.opt.splitright = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.updatetime = 250
+
+vim.keymap.set({ 'n', 'i', 'v', 'c' }, '<F1>', '<Nop>') -- disable the help page
